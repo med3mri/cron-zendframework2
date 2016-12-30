@@ -1,0 +1,9 @@
+<?php if($success): ?>
+<h2> le Cron est Creé avec succès</h2>
+<?php else: ?>
+<h2> Erreur generer lors de deploiement de l'application ou bien vériez les droit d'utilisateur sur les fichiers :</h2>
+<?php 
+echo $error;
+endif;
+?>
+

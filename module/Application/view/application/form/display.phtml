@@ -1,0 +1,23 @@
+<h1>Form Cron</h1>
+
+<?php
+$form = $this->form;
+$form->prepare();
+if(count($form->getElements())):
+echo $this->form()->openTag($form);
+for($i=0;$i<count($form->getElements());$i++):
+?>   
+
+   <div class="form-group">    
+        <?php 
+         echo $this->formRow($form->get($i));
+        ?>
+    </div>
+<?php
+  endfor;
+  echo $this->form()->closeTag($form); 
+  else:
+?>
+ le cron n'est pas encore generé<br/><br/>
+ Vieulliez Lire la documentation pour executer le cron
+<?php endif; ?>
